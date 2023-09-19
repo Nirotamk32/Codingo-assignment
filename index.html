@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You Popup</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="container-div">
+            <ul class="nav-items">
+                <li><a href="#0">Logo</a></li>
+                <li>Round One:Practical</li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section id="header-sec">
+        <div class="container-div">
+            <div class="row">
+                <div class="left-shape"></div>
+                <div class="heading">
+                    <h2>Contact Us Form</h2>
+                </div>
+                <div class="right-shape"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="form-sec">
+        <div class="container-div">
+            <div class="row">
+                <div class="form">
+                    <form action="" method="post" onsubmit="showPopup(); return false;">
+                        <input type="text" placeholder="First Name" required>
+                        <input type="text" placeholder="Last Name" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea name="" id="message" cols="30" rows="10" placeholder="About Yourself"></textarea>
+                        <div class="cta-btn">
+                            <button href="#0" type="submit" value="Submit">Submit</button>
+                        </div>
+                    </form>
+                    <div class="cards">
+                        <div class="card first-card">
+                            <p><strong>Office Address:</strong> Master creationz, industrial area, sector 74 sahibzada ajit sigh nagar, punjab 160072
+                            </p>
+                        </div>
+                        <div class="card second-card">
+                            <p><strong>Mail:</strong> nirotam@mastercreationz.com</p>
+                        </div>
+                        <div class="card third-card">
+                            <p><strong>Contact:</strong> +91 8872166502</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <footer>
+        <div class="container-div">
+            <div class="footer-content">
+                <h4>Practice</h4>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesettin</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <!-- <button onclick="showPopup()">Show Thank You Popup</button> -->
+
+    <div id="popup" class="popup-container">
+
+        <div class="popup-box">
+            <p>We received your message. Our team will contact you shortly with the solution to your query.</p>
+            <button onclick="hidePopup()">Okah!!</button>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        function showPopup() {
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function hidePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+
+
+
+
+    <script>
+        $(document).ready(function() {
+
+            var highestBox = 0;
+            $('.container-div .card').each(function() {
+                if ($(this).height() > highestBox) {
+                    highestBox = $(this).height();
+                }
+            });
+            $('.container-div .card').height(highestBox);
+
+        });
+    </script>
+
+</body>
+
+</html>
